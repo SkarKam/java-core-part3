@@ -1,0 +1,11 @@
+<suite>
+    <test name="Run all tests">
+        <classes>
+            <class name="org.griddynamics.Task1Test"/>
+            <class name="org.griddynamics.Task2Test"/>
+            <class name="org.griddynamics.Task3Test"/>
+            <class name="org.griddynamics.Task4Test"/>
+            <class name="org.griddynamics.Task5Test"/>
+        </classes>
+    </test>
+</suite>
