@@ -1,4 +1,5 @@
 package org.griddynamics;
+import io.qameta.allure.Description;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import java.util.Arrays;
@@ -8,6 +9,7 @@ public class Task1Test {
 
 
     @Test
+    @Description("Testing functionality of random number generator")
     public void testGenerateRandomNumberList() {
         List<Integer> numberList = Task1.generateRandomNumberList();
 
@@ -17,6 +19,7 @@ public class Task1Test {
 
 
     @Test
+    @Description("Verify that list contains only EVEN numbers")
     public void testGetEvenNumbersList() {
         List<Integer> input = Arrays.asList(0,1, 4, 6, 7 ,85 ,100);
         List<Integer> expected = Arrays.asList(0,4,6,100);
@@ -25,5 +28,15 @@ public class Task1Test {
 
         Assert.assertNotNull(evenList,"List is empty!");
         Assert.assertEquals(evenList, expected,"List contains odd numbers!");
+    }
+
+    @Test
+    @Description("Verify if list is null")
+    public void testGetEvenNumbersList_Null() {
+
+        List<Integer> evenList = Task1.getEvenNumbersList(null);
+
+        Assert.assertNotNull(evenList,"List is empty!");
+        Assert.assertEquals(evenList,"List contains odd numbers!");
     }
 }
