@@ -1,5 +1,9 @@
 package org.griddynamics;
 
+import io.qameta.allure.Allure;
+import io.qameta.allure.Description;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -8,12 +12,15 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import static org.testng.Assert.*;
-
 public class Task5Test {
 
     @Test
+    @Description("Convert a Map<String, List<String>> to list for getting an list of letters")
+    @Severity(SeverityLevel.BLOCKER)
     public void testGetListOfLetters() {
+
+        Allure.label("tag","Converter");
+
         Map<String, List<String>> people = new HashMap<>();
         people.put("John", Arrays.asList("555-1123","s", "555-3389", "a"));
         people.put("Mary", Arrays.asList("555-2243","z", "555-5264"));

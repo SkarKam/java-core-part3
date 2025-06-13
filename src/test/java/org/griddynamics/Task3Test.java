@@ -1,5 +1,9 @@
 package org.griddynamics;
 
+import io.qameta.allure.Allure;
+import io.qameta.allure.Description;
+import io.qameta.allure.Severity;
+import io.qameta.allure.SeverityLevel;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -9,7 +13,13 @@ import java.util.List;
 public class Task3Test {
 
     @Test
+    @Description("Verify that list contain name starting with letter A")
+    @Severity(SeverityLevel.NORMAL)
     public void testHasNameStartingWithA() {
+
+        Allure.label("tag","Collection values operation");
+        Allure.label("tag","Contain");
+
         List<String> namelist = Arrays.asList("Adam","Adrian","Stachu","Krzychu");
 
         boolean contain = Task3.hasAnyNameStartingWithA(namelist);
@@ -18,7 +28,13 @@ public class Task3Test {
     }
 
     @Test
+    @Description("Verify that list doesn't contain name starting with letter H")
+    @Severity(SeverityLevel.NORMAL)
     public void testContainsNoNamesStartingWithH() {
+
+        Allure.label("tag","Collection values operation");
+        Allure.label("tag","Contain");
+
         List<String> namelist = Arrays.asList("Adam","Adrian","Stachu","Krzychu");
         boolean notContain = Task3.containsNoNamesStartingWithH(namelist);
 
@@ -31,7 +47,13 @@ public class Task3Test {
     }
 
     @Test
+    @Description("Count names that start with letter A")
+    @Severity(SeverityLevel.NORMAL)
     public void testCountNamesStartingWithA() {
+
+        Allure.label("tag","Collection values operation");
+        Allure.label("tag","Count");
+
         List<String> nameList = Arrays.asList("Adam","Adrian","Stachu","Krzychu","Alan");
         long nameCounter = Task3.countNamesStartingWithA(nameList);
 
@@ -39,7 +61,13 @@ public class Task3Test {
     }
 
     @Test
+    @Description("Find first name that start with letter L")
+    @Severity(SeverityLevel.NORMAL)
     public void testFindFirstNameStartingWithL() {
+
+        Allure.label("tag","Collection values operation");
+        Allure.label("tag","Contain");
+
         List<String> nameList = Arrays.asList("Adam","Adrian","Liam","Lokesh","Alan");
         String name = Task3.findFirstNameStartingWithL(nameList);
 
