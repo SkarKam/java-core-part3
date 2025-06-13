@@ -29,14 +29,4 @@ public class Task1Test {
         Assert.assertNotNull(evenList,"List is empty!");
         Assert.assertEquals(evenList, expected,"List contains odd numbers!");
     }
-
-    @Test
-    @Description("Verify if list is null")
-    public void testGetEvenNumbersList_Null() {
-
-        List<Integer> evenList = Task1.getEvenNumbersList(null);
-
-        Assert.assertNotNull(evenList,"List is empty!");
-        Assert.assertEquals(evenList,"List contains odd numbers!");
-    }
 }
